@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <stdlib.h>
+void proektseti(float n, float f, float h, float t, float m)
+{
+	float proekt = 0;
+	float cabel = ((h + t) * f + (n * m)) * 1.5;
+	float skafi = 143 * f;
+	float roz_obsh = n * 3;
+	float probivka = 20 * n;
+	proekt = cabel + skafi + probivka+roz_obsh;
+	float setevoe = proekt * 0.3;
+	printf("%.2f$",setevoe);
+
+
+}
+
+void Lcabel(float n, float f, float h, float t, float m)
+{
+	float cabel = ((h + t) * f + (n * m));
+	printf("%.2f(m)",cabel);
+}
+
+//void InfING(float n, float f)
+//{
+//	float skafi = 110 * f;
+//	printf("\nFor wardrobes:%.2f$",skafi);
+//	float roz_obsh = n * 3;
+//	printf("\nFor sockets:%.2f$",roz_obsh);
+//	float infing = skafi + roz_obsh;
+//	printf("\nTOGETHER:%.2f$",infing);
+//}
+
+void info()
+{
+	printf("Assembly firm AMP");
+	printf("\n-----------------\nContacts:\n+ 375 17 279 - 36 - 96 (home) \n+ 375 29 555 - 92 - 55 (velcom)\n");
+}
+
+//void project(float n, float f, float h, float t, float m)
+//{
+//	float proekt = 0;
+//	float cabel = ((h + t) * f + (n * m)) * 1.5;
+//	float skafi = 143 * f;
+//	float roz_obsh = n * 3;
+//	float probivka = 20 * n;
+//	proekt = cabel + skafi + probivka + roz_obsh;
+//	float setevoe = proekt * 0.3;
+//	proekt += setevoe;
+//	printf("%.2f$",proekt);
+//}
+//float WRITE()
+//{
+//	float n=0, b=0;
+//	printf("Write:");
+//	do
+//	{
+//	 b = 0;
+//		
+//	 scanf("%f", &n);
+//		if (n < 0)
+//		{
+//			printf("\nWrite normal number:");
+//			b = 1;
+//		}
+//
+//	} while (b == 1);
+//		return n;
+//}
+
+
+/*void menu()
+{
+	system("cls");
+	printf("----------MENU----------\n");
+	printf("1) Entry number of connections\n");
+	printf("2) Entry number of floors that want to connect to the network\n");
+	printf("3) Enter the*/ /*height of the ceilings and the thickness of the floors\n");
+	printf("4) Enter the average distance from the connection point to the distribution Cabinet\n");
+	printf("5) Calculate the cost of network design\n");
+	printf("6) Calculate the total cable length\n");
+	printf("7) Calculate the cost of necessary network equipment\n");
+	printf("8) Calculate of the total project cost\n");
+	printf("9) Info\n");
+	printf("10) Exit\n");
+	printf(">");*/
+}
+
+int main()
+{ 
+	int variant;
+	float N_Con=0,Floors=0,height=0,Thickn=0,mid=0;
+	do
+	{
+		menu();
+		scanf("%d", &variant);
+		switch (variant)
+		{
+		case 1:
+			N_Con = WRITE();
+			break;
+		
+		case 2:
+			Floors = WRITE();
+			break;
+		
+		case 3:
+			printf("1)Height in meters\n");
+			height = WRITE(); 
+			printf("2)Thickness in meters\n");
+			Thickn = WRITE(); 
+			break;
+		
+		case 4:
+			mid = WRITE();
+			break;
+
+		case 5:
+			proektseti(N_Con,Floors,height,Thickn,mid);
+			break;
+		
+	
+		case 6:
+			Lcabel(N_Con, Floors, height, Thickn, mid);
+			break;
+
+		case 7:
+			InfING(N_Con, Floors);
+			break;/*
+		
+		case 8:
+			project(N_Con, Floors, height, Thickn, mid);
+			break;
+		
+		case 9:
+			info();
+			break;
+		
+		
+		}
+		
+		if (variant != 10) system("pause");
+	} while (variant!=10);*/
+
+
+}
